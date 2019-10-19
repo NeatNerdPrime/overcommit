@@ -600,6 +600,15 @@ PreCommit:
       - '--error-level=all'
     include: '**/*.pp'
 
+  PuppetPdk:
+    enabled: false
+    description: 'Validating puppet modules with Puppetlabs PDK'
+    required_executable: 'pdk'
+    flags:
+      - 'validate'
+      - '--parallel'
+      - '--debug'
+
   Pycodestyle:
     enabled: false
     description: 'Analyze with pycodestyle'
